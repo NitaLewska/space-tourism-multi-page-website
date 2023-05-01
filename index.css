@@ -23,6 +23,16 @@ dd {
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -269,7 +279,7 @@ select {
 
 .large-button {
     position: relative;
-    display: grid;
+    display: inline-grid;
     z-index: 1;
     place-items: center;
     padding: 0 2em;
@@ -284,7 +294,7 @@ select {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: hsl( var(--clr-white) / .15);
+    background: hsl(var(--clr-white) / .15);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 500ms linear, transform 750ms ease-in-out;
@@ -308,66 +318,66 @@ select {
     text-decoration: none;
 }
 
-.primary-navigation a > span {
+.primary-navigation a>span {
     font-weight: 700;
     margin-right: .5em;
 }
 
-.underline-indicators > * {
+.underline-indicators>* {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
-    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-    border-color: hsl( var(--clr-white) / .5);
+.underline-indicators>*:hover,
+.underline-indicators>*:focus {
+    border-color: hsl(var(--clr-white) / .5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
-    color: hsl( var(--clr-white) / 1);
-    border-color: hsl( var(--clr-white) / 1); 
+.underline-indicators>.active,
+.underline-indicators>[aria-selected="true"] {
+    color: hsl(var(--clr-white) / 1);
+    border-color: hsl(var(--clr-white) / 1);
 }
 
 .tab-list {
     --gap: 2rem;
 }
 
-.dot-indicators > * {
+.dot-indicators>* {
     cursor: pointer;
     border: 0;
     border-radius: 50%;
     padding: .5em;
-    background-color: hsl( var(--clr-white) / .25);
+    background-color: hsl(var(--clr-white) / .25);
 }
 
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
-    background-color: hsl( var(--clr-white) / .5);
+.dot-indicators>*:hover,
+.dot-indicators>*:focus {
+    background-color: hsl(var(--clr-white) / .5);
 }
 
-.dot-indicators > [aria-selected="true"] {
-    background-color: hsl( var(--clr-white) / 1); 
+.dot-indicators>[aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
 }
 
-.number-indicators > * {
+.number-indicators>* {
     cursor: pointer;
-    border: 0.01em solid hsl( var(--clr-white) / 0.25);
+    border: 0.01em solid hsl(var(--clr-white) / 0.25);
     border-radius: 50%;
-    background-color: hsl( var(--clr-white) / 0);
+    background-color: hsl(var(--clr-white) / 0);
     aspect-ratio: 1;
     width: 2.5em;
     color: var(--clr-white);
 }
 
-.number-indicators > *:hover,
-.number-indicators > *:focus {
-    border: 0.01em solid hsl( var(--clr-white) / 1);
+.number-indicators>*:hover,
+.number-indicators>*:focus {
+    border: 0.01em solid hsl(var(--clr-white) / 1);
 }
 
-.number-indicators > [aria-selected="true"] {
-    color: hsl( var(--clr-dark) / 1);
-    background-color: hsl( var(--clr-white) / 1); 
+.number-indicators>[aria-selected="true"] {
+    color: hsl(var(--clr-dark) / 1);
+    background-color: hsl(var(--clr-white) / 1);
 }
