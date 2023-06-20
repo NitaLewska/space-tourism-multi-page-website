@@ -174,7 +174,7 @@ select {
 }
 
 .flow--space-small {
-    --flow-space:0.75rem
+    --flow-space: 0.75rem
 }
 
 .container {
@@ -548,7 +548,7 @@ select {
 body {
     background-size: cover;
     background-position: bottom center;
-    
+
     scrollbar-gutter: stable;
 }
 
@@ -640,6 +640,7 @@ body {
         'image'
         'tabs'
         'content';
+    align-items: stretch;
 }
 
 .grid-container--destination>picture {
@@ -677,7 +678,7 @@ body {
         'image'
         'tabs'
         'content';
-        align-items: flex-start;
+    align-items: flex-start;
 }
 
 .grid-container--crew>picture {
@@ -708,6 +709,11 @@ body {
     .numbered-title {
         justify-self: start;
         margin-top: 2rem;
+    }
+
+
+    .grid-container--destination>h1 {
+        margin-bottom: 3rem;
     }
 
     .destination-meta {
@@ -771,7 +777,7 @@ body {
         max-width: 90%;
     }
 
-    .grid-container--crew>picture{
+    .grid-container--crew>picture {
         grid-column: span 2;
         align-self: end;
         max-width: 90%;
