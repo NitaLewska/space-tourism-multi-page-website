@@ -843,7 +843,7 @@ body {
     }
 
     .grid-container--technology {
-        grid-template-columns: minmax(2rem, 1fr)  5rem minmax(0, 28rem) minmax(0, 20rem) minmax(2rem, 1fr);
+        grid-template-columns: minmax(2rem, 1fr)  5rem minmax(0, 30rem) minmax(0, 17rem) minmax(2rem, 1fr);
         column-gap: var(--container-gap, 5rem);
         grid-template-areas:
             '. title title title .'
@@ -858,6 +858,7 @@ body {
     .grid-container--technology>.number-indicators {
         align-self: center;
         padding-bottom: 5rem;
+        gap: 2rem;
     }
 
     .technology-details{
@@ -867,5 +868,6 @@ body {
 
     .grid-container--technology>picture {
         justify-self: end;
+        align-self: center;
     }
 }
