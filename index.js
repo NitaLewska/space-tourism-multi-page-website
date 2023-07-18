@@ -57,3 +57,24 @@ buttonsCrew.forEach(a => a.addEventListener('click', function() {
     currentImage.setAttribute('style', 'display:block')
 }))
 
+const buttonsTech = document.querySelectorAll('.grid-container--technology>.number-indicators>button')
+// const crewHeading = document.querySelector('.crew-details h2')
+// const crewName = document.querySelector('.crew-details h2 + p')
+const techDescription = document.querySelector('.technology-details>p')
+// const crewImages = document.querySelectorAll(".grid-container--crew>picture")
+
+
+
+buttonsTech.forEach(a => a.addEventListener('click', function() {
+    buttonsTech.forEach(b => b.ariaSelected = 'false')
+    buttonsTech.forEach(b => b.ariaSelected = 'false')
+    a.ariaSelected = 'true'
+    let index = a.innerHTML - 1
+    // crewHeading.innerHTML = data.crew[index].role
+    techDescription.innerHTML = data.technology[index].description
+    // crewName.innerHTML = data.crew[index].name
+    // crewImages.forEach(i => i.setAttribute('style', 'display:none'))
+    // let currentImage = document.querySelector(`.grid-container--crew>picture:nth-of-type(${index + 1})`)
+    // currentImage.setAttribute('style', 'display:block')
+}))
+
