@@ -13,7 +13,6 @@ navToggle.addEventListener("click", () => {
 })
 
 import data from './data.json' assert { type: 'json' };
-console.log(data);
 
 const buttonsDestination = document.querySelectorAll('.grid-container--destination>.tab-list>button')
 const destinationHeading = document.querySelector('.destination-info h2')
@@ -41,8 +40,6 @@ const crewHeading = document.querySelector('.crew-details h2')
 const crewName = document.querySelector('.crew-details h2 + p')
 const crewDescription = document.querySelector('.crew-details>p')
 const crewImages = document.querySelectorAll(".grid-container--crew>picture")
-
-console.log(buttonsCrew)
 
 buttonsCrew.forEach(a => a.addEventListener('click', function() {
     buttonsCrew.forEach(b => b.ariaSelected = 'false')
