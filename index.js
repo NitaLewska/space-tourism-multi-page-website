@@ -28,9 +28,9 @@ const destinationTime = document.querySelector('.destination-info .destination--
 const destinationImages = document.querySelectorAll(".grid-container--destination>picture")
 
 buttonsDestination.forEach(a => a.addEventListener('click', function () {
-    buttonsDestination.forEach(b => b.ariaSelected = 'false')
+    buttonsDestination.forEach(b => b.setAttribute('aria-selected', false))
     console.log(a.innerHTML)
-    a.ariaSelected = 'true'
+    a.setAttribute('aria-selected', true)
     let index = data.destinations.findIndex(p => p.name == a.innerHTML)
     destinationHeading.innerHTML = data.destinations[index].name
     destinationDescription.innerHTML = data.destinations[index].description
@@ -49,9 +49,8 @@ const crewDescription = document.querySelector('.crew-details>p')
 const crewImages = document.querySelectorAll(".grid-container--crew>picture")
 
 buttonsCrew.forEach(a => a.addEventListener('click', function () {
-    buttonsCrew.forEach(b => b.ariaSelected = 'false')
-    buttonsCrew.forEach(b => b.ariaSelected = 'false')
-    a.ariaSelected = 'true'
+    buttonsCrew.forEach(b => b.setAttribute('aria-selected', false))
+    a.setAttribute('aria-selected', true)
     let index = data.crew.findIndex(p => p.role.toLowerCase() == a.innerText.slice(4))
     crewHeading.innerHTML = data.crew[index].role
     crewDescription.innerHTML = data.crew[index].bio
@@ -69,9 +68,8 @@ const techImages = document.querySelectorAll(".grid-container--technology>pictur
 
 
 buttonsTech.forEach(a => a.addEventListener('click', function () {
-    buttonsTech.forEach(b => b.ariaSelected = 'false')
-    buttonsTech.forEach(b => b.ariaSelected = 'false')
-    a.ariaSelected = 'true'
+    buttonsTech.forEach(b => b.setAttribute('aria-selected', false))
+    a.setAttribute('aria-selected', true)
     let index = a.innerHTML - 1
     techDescription.innerHTML = data.technology[index].description
     techName.innerHTML = data.technology[index].name
