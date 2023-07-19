@@ -12,7 +12,13 @@ navToggle.addEventListener("click", () => {
     }
 })
 
-import data from './data.json' assert { type: 'json' };
+async function getData(url) {
+    const response = await fetch(url);
+    return response.json();
+}
+
+const data = await getData("./data.json");
+
 
 const buttonsDestination = document.querySelectorAll('.grid-container--destination>.tab-list>button')
 const destinationHeading = document.querySelector('.destination-info h2')
@@ -21,8 +27,9 @@ const destinationDistance = document.querySelector('.destination-info .destinati
 const destinationTime = document.querySelector('.destination-info .destination--time')
 const destinationImages = document.querySelectorAll(".grid-container--destination>picture")
 
-buttonsDestination.forEach(a => a.addEventListener('click', function() {
+buttonsDestination.forEach(a => a.addEventListener('click', function () {
     buttonsDestination.forEach(b => b.ariaSelected = 'false')
+    console.log(a.innerHTML)
     a.ariaSelected = 'true'
     let index = data.destinations.findIndex(p => p.name == a.innerHTML)
     destinationHeading.innerHTML = data.destinations[index].name
@@ -41,7 +48,7 @@ const crewName = document.querySelector('.crew-details h2 + p')
 const crewDescription = document.querySelector('.crew-details>p')
 const crewImages = document.querySelectorAll(".grid-container--crew>picture")
 
-buttonsCrew.forEach(a => a.addEventListener('click', function() {
+buttonsCrew.forEach(a => a.addEventListener('click', function () {
     buttonsCrew.forEach(b => b.ariaSelected = 'false')
     buttonsCrew.forEach(b => b.ariaSelected = 'false')
     a.ariaSelected = 'true'
@@ -61,7 +68,7 @@ const techImages = document.querySelectorAll(".grid-container--technology>pictur
 
 
 
-buttonsTech.forEach(a => a.addEventListener('click', function() {
+buttonsTech.forEach(a => a.addEventListener('click', function () {
     buttonsTech.forEach(b => b.ariaSelected = 'false')
     buttonsTech.forEach(b => b.ariaSelected = 'false')
     a.ariaSelected = 'true'
